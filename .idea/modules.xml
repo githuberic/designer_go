@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/tortoise.iml" filepath="$PROJECT_DIR$/.idea/tortoise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/designer_go.iml" filepath="$PROJECT_DIR$/.idea/designer_go.iml" />
     </modules>
   </component>
 </project>
