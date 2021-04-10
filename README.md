@@ -1,2 +1,2 @@
-# The Go Programming Language
-tortoise for golang(龟速坚持)
+# 项目定位
+golang 相关的面向对象、设计模型、架构架构
