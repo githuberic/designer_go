@@ -1,7 +1,7 @@
 package bad
 
 import (
-	"tortoise/go_object/principle/law_of_demeter/common"
+	"tortoise/principle/law_of_demeter/common"
 )
 
 type TeamMember struct {

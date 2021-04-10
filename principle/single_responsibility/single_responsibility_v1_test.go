@@ -2,8 +2,8 @@ package single_responsibility
 
 import (
 	"testing"
-	"tortoise/go_object/principle/single_responsibility/bad"
-	"tortoise/go_object/principle/single_responsibility/good"
+	"tortoise/principle/single_responsibility/bad"
+	"tortoise/principle/single_responsibility/good"
 )
 
 func Test_SimpleResponsibility_Bad(t *testing.T) {

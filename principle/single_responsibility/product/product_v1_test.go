@@ -3,8 +3,8 @@ package single_responsibility
 import (
 	"fmt"
 	"testing"
-	"tortoise/go_object/principle/single_responsibility/product/bad"
-	good "tortoise/go_object/principle/single_responsibility/product/good"
+	"tortoise/principle/single_responsibility/product/bad"
+	good "tortoise/principle/single_responsibility/product/good"
 )
 
 func Test_SimpleResponsibility_Bad(t *testing.T) {

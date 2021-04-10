@@ -1,7 +1,7 @@
 package bad
 
 import (
-	"tortoise/go_object/principle/composite_reuse/entity"
+	"tortoise/principle/composite_reuse/entity"
 )
 
 /**

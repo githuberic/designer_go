@@ -1,11 +1,11 @@
-package bad
+package good
 
 import (
 	"testing"
-	"tortoise/go_object/principle/composite_reuse/entity"
+	"tortoise/principle/composite_reuse/entity"
 )
 
-func TestVerifyBad(t *testing.T) {
+func TestVerifyGood(t *testing.T) {
 	fnCallAndLog := func(fn func() (error, int)) {
 		e, rows := fn()
 		if e != nil {
@@ -15,16 +15,19 @@ func TestVerifyBad(t *testing.T) {
 		}
 	}
 
+	con := NewMysqlConnection("database connection url", "sa", "123")
+	gd := NewProductDAO()
+	gd.SetDBConnection(con)
+
 	product := entity.NewProduct(1, "手机", 1000)
-	bd := NewProductDAO("database connection url", "sa", "123")
 	fnCallAndLog(func() (error, int) {
-		return bd.Insert(product)
+		return gd.Insert(product)
 	})
 	fnCallAndLog(func() (error, int) {
-		return bd.Update(product)
+		return gd.Update(product)
 	})
 	fnCallAndLog(func() (error, int) {
-		return bd.Delete(product.ID)
+		return gd.Delete(product.ID)
 	})
 }
 
