@@ -4,7 +4,6 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"strings"
 	"sync"
 )
 
@@ -14,37 +13,6 @@ const (
 )
 
 var WrongStateError = errors.New("can not take the operation in the current state")
-
-type CollectorsError struct {
-	CollectorErrors []error
-}
-
-func (ce CollectorsError) Error() string {
-	var strs []string
-	for _, err := range ce.CollectorErrors {
-		strs = append(strs, err.Error())
-	}
-	return strings.Join(strs, ";")
-}
-
-type Event struct {
-	Source  string
-	Content string
-}
-
-
-type EventReceiver interface {
-	OnEvent(evt Event)
-}
-
-type Collector interface {
-	// 事件回传EventReceiver
-	Init(evtReceiver EventReceiver) error
-	// Collector 在不同的协程里面，启动时传递Context信息
-	Start(agtCtx context.Context) error
-	Stop() error
-	Destroy() error
-}
 
 type Agent struct {
 	collectors map[string]Collector
