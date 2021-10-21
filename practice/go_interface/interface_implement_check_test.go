@@ -1,4 +1,4 @@
-package interface3_test
+package go_interface_test
 
 // 接口完整性检查
 // 检查一个对象是否实现了某接口所有的接口方法

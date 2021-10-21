@@ -1,4 +1,4 @@
-package interface2_test
+package v1_test
 
 // 结构体嵌入
 import (
@@ -27,8 +27,8 @@ func (w WithName) PrintStr() {
 }
 
 func TestVerify(t *testing.T)  {
-	c1 := Country {WithName{ "China"}}
-	c2 := City { WithName{"Beijing"}}
+	c1 := Country{WithName{"China"}}
+	c2 := City{WithName{"Beijing"}}
 	c1.PrintStr()
 	c2.PrintStr()
 }

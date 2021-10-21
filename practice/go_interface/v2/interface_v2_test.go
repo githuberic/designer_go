@@ -1,4 +1,4 @@
-package interface2_test
+package v2_test
 
 import (
 	"fmt"
@@ -13,7 +13,7 @@ type City struct {
 	Name string
 }
 
-type Stringable interface {
+type StringAble interface {
 	ToString() string
 }
 func (c Country) ToString() string {
@@ -23,12 +23,12 @@ func (c City) ToString() string{
 	return "City = " + c.Name
 }
 
-func PrintStr(p Stringable) {
+func PrintStr(p StringAble) {
 	fmt.Println(p.ToString())
 }
 
 func TestVerify(t *testing.T)  {
-	d1 := Country {"USA"}
+	d1 := Country{"USA"}
 	d2 := City{"Los Angeles"}
 	PrintStr(d1)
 	PrintStr(d2)
