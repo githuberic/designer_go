@@ -1,7 +1,7 @@
 package good
 
 import (
-	"tortoise/principle/composite_reuse/entity"
+	"designer_go/principle/composite_reuse/entity"
 )
 
 /**

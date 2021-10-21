@@ -2,7 +2,7 @@ package good
 
 import (
 	"testing"
-	"tortoise/principle/composite_reuse/entity"
+	"designer_go/principle/composite_reuse/entity"
 )
 
 func TestVerifyGood(t *testing.T) {

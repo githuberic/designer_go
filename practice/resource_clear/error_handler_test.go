@@ -1,8 +1,9 @@
-package error_handler_test
+package resource_clear_test
 
 import (
 	"io"
 	"log"
+	"testing"
 )
 
 func Close(c io.Closer) {
@@ -12,7 +13,11 @@ func Close(c io.Closer) {
 	}
 }
 
-func main() {
+func Open(str string) (io.Closer, error) {
+	return nil, nil
+}
+
+func TestClose(t *testing.T) {
 	r, err := Open("a")
 	if err != nil {
 		log.Fatalf("error opening 'a'\n")
@@ -25,4 +30,3 @@ func main() {
 	}
 	defer Close(r) // 使用defer关键字在函数退出时关闭文件。
 }
-

@@ -2,7 +2,7 @@ package bad
 
 import (
 	"fmt"
-	"tortoise/principle/law_of_demeter/common"
+	"designer_go/principle/law_of_demeter/common"
 )
 
 type TeamLeader struct {

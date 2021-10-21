@@ -1,7 +1,7 @@
 package good
 
 import (
-	entity "tortoise/principle/composite_reuse/product/entity"
+	entity "designer_go/principle/composite_reuse/product/entity"
 )
 
 type ProductImage struct {

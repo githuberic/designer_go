@@ -2,8 +2,8 @@ package interface_segregation
 
 import (
 	"testing"
-	"tortoise/principle/interface_segregation/bad"
-	"tortoise/principle/interface_segregation/good"
+	"designer_go/principle/interface_segregation/bad"
+	"designer_go/principle/interface_segregation/good"
 )
 
 func TestVerifyBad(t *testing.T) {
