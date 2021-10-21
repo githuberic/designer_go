@@ -1,17 +1,10 @@
-package error_handler
+package fluent_interface
 
 import (
 	"bytes"
 	"encoding/binary"
 	"fmt"
-)
-
-package main
-
-import (
-"bytes"
-"encoding/binary"
-"fmt"
+	"testing"
 )
 
 // 长度不够，少一个Weight
@@ -24,6 +17,7 @@ type Person struct {
 	Weight uint8
 	err error
 }
+
 func (p *Person) read(data interface{}) {
 	if p.err == nil {
 		p.err = binary.Read(r, binary.BigEndian, data)
@@ -49,7 +43,7 @@ func (p *Person) Print() *Person {
 	return p
 }
 
-func main() {
+func TestFluent(t *testing.T) {
 	p := Person{}
 	p.ReadName().ReadAge().ReadWeight().Print()
 	fmt.Println(p.err)  // EOF 错误

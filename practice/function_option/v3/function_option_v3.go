@@ -2,6 +2,7 @@ package function_option
 
 import (
 	"crypto/tls"
+	"testing"
 	"time"
 )
 
@@ -37,7 +38,6 @@ func TLS(tls *tls.Config) Option {
 	}
 }
 
-
 func NewServer(addr string, port int, options ...func(*Server)) (*Server, error) {
 	srv := Server{
 		Addr:     addr,
@@ -54,6 +54,8 @@ func NewServer(addr string, port int, options ...func(*Server)) (*Server, error)
 	return &srv, nil
 }
 
-s1, _ := NewServer("localhost", 1024)
-s2, _ := NewServer("localhost", 2048, Protocol("udp"))
-s3, _ := NewServer("0.0.0.0", 8080, Timeout(300*time.Second), MaxConns(1000))
+func TestFunctionOption(t *testing.T) {
+	_, _ = NewServer("localhost", 1024)
+	_, _ = NewServer("localhost", 2048, Protocol("udp"))
+	_, _ = NewServer("0.0.0.0", 8080, Timeout(300*time.Second), MaxConns(1000))
+}
