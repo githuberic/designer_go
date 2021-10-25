@@ -16,9 +16,10 @@
 - DiscountedProduct继承自Product, 添加实现折扣接口, 并覆盖IProduct.price()方法
 
 ## 被实现的设计模式
-策略模式（Strategy Pattern）: 开闭原则的践行者
-
-
+- 策略模式（Strategy Pattern）: 开闭原则的践行者
+- 观察者模式（Observer Pattern）: 开闭原则的践行者 
+- 适配器模式（Adapter Pattern）: 开闭原则的践行者
+- 使用模板方法模式实现开闭原则
 
 
 
