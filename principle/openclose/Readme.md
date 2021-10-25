@@ -15,6 +15,10 @@
 - 增加"折后拍品" - DiscountedProduct, 同时实现拍品接口和折扣接口
 - DiscountedProduct继承自Product, 添加实现折扣接口, 并覆盖IProduct.price()方法
 
+## 被实现的设计模式
+策略模式（Strategy Pattern）: 开闭原则的践行者
+
+
 
 
 
