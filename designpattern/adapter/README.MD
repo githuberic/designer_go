@@ -14,10 +14,3 @@
 
 ## 应用实例:
 - 充电器转接口头
-- 安卓的ListView
-```java
-ListView lv=(ListView) findViewById(R.id.lv);
-String []data ={"hi","nihao","yes","no"};
-ArrayAdapter<String> adapter=new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,data);
-lv.setAdapter(adapter);
-```

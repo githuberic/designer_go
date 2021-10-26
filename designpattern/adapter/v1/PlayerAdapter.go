@@ -8,7 +8,6 @@ type PlayerAdapter struct {
 
 func (this *PlayerAdapter) play(fileType string, fileName string) {
 	switch fileType {
-
 	case "mp3":
 		this.player.playMp3(fileName)
 	case "wma":
