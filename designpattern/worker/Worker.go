@@ -13,7 +13,7 @@ type Worker struct {
 
 func NewWorker(workerPool chan chan Job) *Worker {
 	return &Worker{
-		WorkerPool: workerPool,
+		//WorkerPool: workerPool,
 		JobChan:    make(chan Job),
 		QuitChan:   make(chan bool),
 	}
