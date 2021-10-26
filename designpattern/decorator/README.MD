@@ -14,3 +14,8 @@
 
 ## 缺点
 多层装饰比较复杂
+
+## 应用实例:
+- JAVA中的IO流
+ new DataInputStream(new FileInputStream("test.txt"));
+- 人穿衣服，人则为被装饰对象，衣服为装饰器

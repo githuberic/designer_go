@@ -1,6 +1,8 @@
 # 适配器模式
 将一个接口转换为客户想要的另外一个接口，适配器模式使接口不兼容的哪些类在一起工作
 
+关键代码: 适配器中持有旧接口对象，并实现新接口
+
 ## 优势
 可以将一个类的接口和另外一个类的接口匹配起来，使用的前提是不想或不能修改原来的适配器
 母接口(adaptee)
@@ -9,3 +11,13 @@
 - 对象需要利用现有的并且接口不兼容的类
 - 需要创建可重用的类以协作其他接口不一定兼容的类
 - 需要使用若干个现存的子类但又不想派生这些子类的每一个接口
+
+## 应用实例:
+- 充电器转接口头
+- 安卓的ListView
+```java
+ListView lv=(ListView) findViewById(R.id.lv);
+String []data ={"hi","nihao","yes","no"};
+ArrayAdapter<String> adapter=new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,data);
+lv.setAdapter(adapter);
+```
