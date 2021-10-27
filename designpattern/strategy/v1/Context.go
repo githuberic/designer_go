@@ -1,4 +1,4 @@
-package strategy
+package v1
 
 var computer IComputer
 
