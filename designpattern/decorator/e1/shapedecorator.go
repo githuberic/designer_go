@@ -1,4 +1,4 @@
-package decorator
+package e1
 
 // 定义抽象装饰类
 type ShapeDecorator struct {
