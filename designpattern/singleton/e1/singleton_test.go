@@ -1,4 +1,4 @@
-package v1
+package e1
 
 import (
 	"log"
@@ -30,8 +30,8 @@ func TestVerifyHungryV2(t *testing.T) {
 	}
 }
 
-
 func TestVerifyHungry(t *testing.T) {
+	wg := sync.WaitGroup{}
 	singletonList := make([]*SingleObject, 0)
 
 	for i := 0; i < 100; i++ {
@@ -39,6 +39,26 @@ func TestVerifyHungry(t *testing.T) {
 		go func(group sync.WaitGroup) {
 			defer wg.Done()
 			singletonList = append(singletonList, GetInstanceV1())
+		}(wg)
+	}
+	wg.Wait()
+
+	for i := 0; i < len(singletonList)-1; i++ {
+		if singletonList[i] != singletonList[i+1] {
+			t.Fatal("instance is not equal")
+		}
+	}
+}
+
+func TestVerifyLazy(t *testing.T) {
+	wg := sync.WaitGroup{}
+	singletonList := make([]*SingleObject, 0)
+
+	for i := 0; i < 100; i++ {
+		wg.Add(1)
+		go func(group sync.WaitGroup) {
+			defer wg.Done()
+			singletonList = append(singletonList, GetInstanceV4())
 		}(wg)
 	}
 	wg.Wait()

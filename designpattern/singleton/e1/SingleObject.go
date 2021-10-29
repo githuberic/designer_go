@@ -1,8 +1,32 @@
-package v1
+package e1
 
-import (
-	"sync"
-)
+import "sync"
+
+type SingleObject struct {
+	obj interface{}
+}
+
+var singleObj *SingleObject
+
+/**
+懒汉
+*/
+func GetInstanceV1() *SingleObject {
+	if singleObj == nil {
+		singleObj = new(SingleObject)
+	}
+	return singleObj
+}
+
+/**
+饿汉
+*/
+func init() {
+	singleObj = new(SingleObject)
+}
+func GetInstanceV2() *SingleObject {
+	return singleObj
+}
 
 /**
 双锁

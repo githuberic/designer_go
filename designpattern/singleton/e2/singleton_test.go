@@ -1,4 +1,4 @@
-package v2
+package e2
 
 import (
 	"log"
@@ -21,7 +21,7 @@ func TestVerify(t *testing.T) {
 var wg sync.WaitGroup
 
 func TestVerifyV2(t *testing.T) {
-	singletonList := make([]*SingleTon, 0)
+	singletonList := make([]*SingleTon, 0, 100)
 
 	for i := 0; i < 100; i++ {
 		wg.Add(1)
