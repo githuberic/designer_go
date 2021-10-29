@@ -1,6 +1,8 @@
-package decorator
+package e1
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // 定义具体的装饰类
 type RedShapeDecorator struct {

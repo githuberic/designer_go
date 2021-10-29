@@ -1,4 +1,4 @@
-package decorator
+package e1
 
 import "fmt"
 
