@@ -1,4 +1,4 @@
-package static
+package e1
 
 // IUser IUser
 type IUser interface {
