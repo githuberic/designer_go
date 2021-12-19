@@ -1,4 +1,4 @@
-package v2
+package e2
 
 import "testing"
 
@@ -11,5 +11,5 @@ func TestVerify(t *testing.T) {
 	var srv2 ICreateServer = &AliyunClientAdapter{
 		Client: AliyunClient{},
 	}
-	srv2.CreateServer(2.0,4.0)
+	srv2.CreateServer(2.0, 4.0)
 }

@@ -1,4 +1,4 @@
-package v2
+package e2
 
 type AliyunClientAdapter struct {
 	Client AliyunClient

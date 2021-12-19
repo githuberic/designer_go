@@ -1,4 +1,4 @@
-package adapter
+package e1
 
 import (
 	"fmt"
@@ -16,6 +16,7 @@ type AdvancedMediaPlayer interface {
 
 type VlcPlayer struct {
 }
+
 func (s *VlcPlayer) PlayVlc(fileName string) {
 	fmt.Print("Playing vlc file. Name: " + fileName)
 }
@@ -24,6 +25,7 @@ func (s *VlcPlayer) PlayMp4(fileName string) {
 
 type Mp4Player struct {
 }
+
 func (s *Mp4Player) PlayVlc(fileName string) {
 }
 func (s *Mp4Player) PlayMp4(fileName string) {
@@ -66,10 +68,10 @@ func (s *AudioPlayer) Play(audioType string, fileName string) {
 	}
 }
 
-func TestVerify(t *testing.T)  {
+func TestVerify(t *testing.T) {
 	var audioType string = "mp4"
 	var fileName string = "./old.mp4"
 
 	var audioPlayer = AudioPlayer{}
-	audioPlayer.Play(audioType,fileName)
+	audioPlayer.Play(audioType, fileName)
 }

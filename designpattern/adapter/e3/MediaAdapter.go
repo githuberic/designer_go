@@ -1,4 +1,4 @@
-package v3
+package e3
 
 type MediaAdapter struct {
 	advancedMediaPlayer AdvancedMediaPlayer

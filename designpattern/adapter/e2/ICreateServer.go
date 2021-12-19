@@ -1,4 +1,4 @@
-package v2
+package e2
 
 /**
 ICreateServer 创建云主机
