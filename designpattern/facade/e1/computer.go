@@ -1,10 +1,11 @@
-package v1
+package e1
 
 import "fmt"
 
 // CPU
 type CPU struct {
 }
+
 func (p *CPU) start() {
 	fmt.Println("Start CPU")
 }
@@ -12,6 +13,7 @@ func (p *CPU) start() {
 // 内存
 type Memory struct {
 }
+
 func (p *Memory) start() {
 	fmt.Println("Start memory management")
 }
@@ -19,6 +21,7 @@ func (p *Memory) start() {
 // 硬盘
 type Disk struct {
 }
+
 func (p *Disk) start() {
 	fmt.Println("Start disk")
 }
@@ -26,6 +29,7 @@ func (p *Disk) start() {
 // 开机键
 type StartBtn struct {
 }
+
 func (StartBtn) start() {
 	cpu := &CPU{}
 	cpu.start()
