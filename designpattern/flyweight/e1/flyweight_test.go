@@ -1,4 +1,4 @@
-package flyweight
+package e1
 
 import (
 	"github.com/stretchr/testify/assert"

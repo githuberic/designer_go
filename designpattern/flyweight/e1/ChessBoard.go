@@ -1,10 +1,9 @@
-package flyweight
+package e1
 
 // ChessBoard 棋局
 type ChessBoard struct {
 	chessPieces map[int]*ChessPiece
 }
-
 
 // NewChessBoard 初始化棋盘
 func NewChessBoard() *ChessBoard {

@@ -1,4 +1,4 @@
-package flyweight
+package e1
 
 // ChessPiece 棋子
 type ChessPiece struct {
