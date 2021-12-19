@@ -1,4 +1,4 @@
-package prototype
+package e1
 
 import (
 	"bytes"
