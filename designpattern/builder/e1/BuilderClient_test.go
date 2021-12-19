@@ -1,4 +1,4 @@
-package builder
+package e1
 
 import (
 	"fmt"
@@ -7,6 +7,6 @@ import (
 
 func TestVerifyV1(t *testing.T) {
 	director := new(Director)
-	computer := director.Create("Intel","Kingsidun","WD")
+	computer := director.Create("Intel", "Kingsidun", "WD")
 	fmt.Println(*computer)
 }

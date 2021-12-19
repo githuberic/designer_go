@@ -1,4 +1,4 @@
-package builder
+package e1
 
 type Builder interface {
 	SetCPU(cpu string) Builder
