@@ -1,4 +1,4 @@
-package v1
+package e1
 
 import "fmt"
 
@@ -18,5 +18,5 @@ func NewBMPImage(image Image, fileName string, radius float32) *BMPImage {
 
 func (p *BMPImage) Draw() {
 	p.image.drawImg.DoPaint(p.filename)
-	fmt.Printf("BMP Image %s,radius=%f", p.filename,p.radius)
+	fmt.Printf("BMP Image %s,radius=%f", p.filename, p.radius)
 }
