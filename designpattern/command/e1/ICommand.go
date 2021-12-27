@@ -1,4 +1,4 @@
-package v1
+package e1
 
 // 命令接口
 type ICommand interface {
