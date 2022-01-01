@@ -1,12 +1,12 @@
-package v1
+package e1
 
 import (
 	"fmt"
 	"testing"
 )
 
-func TestVerify(t *testing.T)  {
-	context := Context{A: 12,B: 3}
+func TestVerify(t *testing.T) {
+	context := Context{A: 12, B: 3}
 	context.SetContext(new(Add))
 	fmt.Println(context.Result())
 
