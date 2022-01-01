@@ -1,4 +1,4 @@
-package chain
+package e1
 
 import (
 	"fmt"
@@ -9,6 +9,7 @@ import (
 type YellowHandler struct {
 	handler Handler
 }
+
 func (yellow *YellowHandler) Handle(content string) {
 	fmt.Println("执行涉黄过滤。。。")
 	newContent := strings.Replace(content, "涉黄", "**", 1)

@@ -1,4 +1,4 @@
-package chain
+package e1
 
 import (
 	"testing"
