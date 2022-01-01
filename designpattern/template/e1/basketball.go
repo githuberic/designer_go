@@ -1,4 +1,4 @@
-package template
+package e1
 
 import "fmt"
 
@@ -14,7 +14,7 @@ func NewBasketball() *Basketball {
 	return ft
 }
 
-func (p *Basketball) Initialize()  {
+func (p *Basketball) Initialize() {
 	fmt.Println("Basketball game initialize")
 }
 
