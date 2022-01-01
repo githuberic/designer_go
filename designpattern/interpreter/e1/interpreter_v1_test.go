@@ -1,4 +1,4 @@
-package interpreter
+package e1
 
 import (
 	"fmt"
@@ -69,7 +69,7 @@ func (ae *AndExpression) Interpret(context string) bool {
 	return ae.Expr1.Interpret(context) && ae.Expr2.Interpret(context)
 }
 
-func TestOrExpressionTest(t *testing.T)  {
+func TestOrExpressionTest(t *testing.T) {
 	//规则，lee 和 wang 是男性
 	lee := NewTerminalExpression("Lee")
 	wang := NewTerminalExpression("Wang")
